@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1073</width>
+    <height>741</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ebmBus Tester</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButton_openPort">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>95</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>open Port</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_status">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>95</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Kurzstatus</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit_response">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>991</width>
+      <height>461</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_getU">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>50</y>
+      <width>171</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Zwischenkreisspannung</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_getI">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>50</y>
+      <width>151</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Zwischenkreisstrom</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_setSpeed">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>50</y>
+      <width>141</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Drehzahl schreiben</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_speed">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>50</y>
+      <width>131</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_EEPROMread">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>121</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>EEPROM read</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_EEPROMadr">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>90</y>
+      <width>461</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <item>
+     <property name="text">
+      <string>00 Lüftergruppe</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>01 Lüfteradresse</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>02 Betriebsarten 1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>03 Sollwert</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>05 P-Faktor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>06 I-Faktor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>07 D-Faktor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>08 Maximale Drahzahl MSB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>09 Maximale Drehzahl</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0A Maximale Drehzahl LSB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0B Maximaler Duty Cycle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0C Minimaler Duty Cycle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0D Start Duty Cycle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0E Sollwert 0</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0F Sollwert 1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10 Betriebsarten 2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>11 Reduktionsfaktor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>17 Umschaltung Drehzahlregelung / VKK</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>18 Minimalwert Sensor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>19 Minimalwert Sensor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1A Minimalwert Sensor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1B Minimalwert Sensor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1C Maximalwert Sensor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1D Maximalwert Sensor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1E Maximalwert Sensor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1F Maximalwert Sensor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>40 EEPROM Status</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>41 Motoraufbau Polzahl</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>42 Motoraufbau Funktion</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>43 Max. zulässiger Duty Cycle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>44 I-Faktor Drehzahlbegrenzung</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>45 Maximal zulässige Drehzahl MSB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>46 Maximal zulässige Drehzahl</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>47 Maximal zulässige Drehzahl LSB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>49 Minimal zulässiger Duty Cycle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4A Identifikation</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6D Fehleranzeige n High Byte</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6E Fehleranzeige n-1 High Byte</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6F Fehleranzeige n-2 High Byte</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>70 Fehleranzeige n Low Byte</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>71 Fehleranzeige n-1 Low Byte</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>72 Fehleranzeige n-2 Low Byte</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>73 Betriebsstundenzähler MSB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>74 Betriebsstundenzähler LSB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>75 Betriebsminutenzähler</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>86 Maximaler Zwischenkreisstrom</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>95 Hochlauframpe</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>96 Herunterlauframpe</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>97 minimale Zwischenkreisspannung</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>99 Leistungsbegrenzung ein / aus</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9A Modus Unterspannungserkennung</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9B Modus Motorübertemperaturabschaltung</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>B9 Hochlaufzeit Kommutierungscontroller</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>BA Auslaufzeit Kommutierungscontroller</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>BB Bremsdrehzahl</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>BC Bremswinkel 1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>BD Bremswinkel 2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>BE P-Faktor Grenzdrehzahl</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>BF I-Faktor Grenzdrahzahl</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>C0 Grenzdrahzahl LSB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>C1 Grenzdrehazhl MSB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>C2 Abtastintervall Stromregler</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>FB Aktuelle Betriebsart</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>FC Aktueller maximaler Duty Cycle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>FD Aktueller minimaler Duty Cycle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>FE Aktueller Sollwert</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>FF Aktueller Sensor Istwert</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_statusRead">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>121</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Status read</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_StatusAdr">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>130</y>
+      <width>461</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>00 Motorstatus Low Byte</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>01 Motorstatus High Byte</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>02 Warnung</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>03 Zwischenkreisspannung</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>04 Zwischenkreisstrom</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>05 Endstufentemperatur</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>06 Sollwert</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>07 Istwert</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>09 Drehrichtung</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0B PWM Duty Cycle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0E Stufenschalter 1+2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0F Stufenschalter 3+4</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10 Motortemperatur</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>14 Maximaler Volumenstrom</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>15 Minimaler Volumenstrom</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>16 Maximaler Druck</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>17 Minimaler Druck</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>20 Elektronikinnenraumtemperatur</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>21 Checksumme EEPROM LSB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>22 Checksumme EEPROM MSB</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_EEPROMwrite">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>90</y>
+      <width>121</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>EEPROM write</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_EEPROMvalue">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>90</y>
+      <width>131</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1073</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
