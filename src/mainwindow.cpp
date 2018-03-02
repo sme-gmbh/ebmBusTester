@@ -68,7 +68,8 @@ void MainWindow::on_pushButton_status_clicked()
 void MainWindow::on_pushButton_EEPROMread_clicked()
 {
     QString adrText = ui->comboBox_EEPROMadr->currentText().split(" ").first();
-    quint8 eepromRegister = adrText.toInt(nullptr, 16);
+    bool ok;
+    quint8 eepromRegister = adrText.toInt(&ok, 16);
 
     m_ebmbus->readEEPROM(1, 1, eepromRegister);
     //m_ebmbus->writeTelegram(EbmBus::EEPROMread, 1, 1, QByteArray(1, EEPROMregister));
@@ -77,7 +78,8 @@ void MainWindow::on_pushButton_EEPROMread_clicked()
 void MainWindow::on_pushButton_statusRead_clicked()
 {
     QString adrText = ui->comboBox_StatusAdr->currentText().split(" ").first();
-    quint8 statusRegister = adrText.toInt(nullptr, 16);
+    bool ok;
+    quint8 statusRegister = adrText.toInt(&ok, 16);
 
     m_ebmbus->getStatus(1, 1, statusRegister);
     //m_ebmbus->writeTelegram(EbmBus::GetStatus, 1, 1, QByteArray(1, StatusRegister));
@@ -86,7 +88,8 @@ void MainWindow::on_pushButton_statusRead_clicked()
 void MainWindow::on_pushButton_EEPROMwrite_clicked()
 {
     QString adrText = ui->comboBox_EEPROMadr->currentText().split(" ").first();
-    quint8 eepromRegister = adrText.toInt(nullptr, 16);
+    bool ok;
+    quint8 eepromRegister = adrText.toInt(&ok, 16);
 
     m_ebmbus->writeEEPROM(1, 1, eepromRegister, ui->spinBox_EEPROMvalue->value());
 }
