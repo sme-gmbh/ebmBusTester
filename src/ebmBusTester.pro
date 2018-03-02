@@ -13,10 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    ebmbus.cpp
+        mainwindow.cpp
 
-HEADERS  += mainwindow.h \
-    ebmbus.h
+HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+LIBS     += -lebmbus
