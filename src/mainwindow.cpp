@@ -41,28 +41,24 @@ void MainWindow::slot_gotResponse(quint8 preamble, quint8 commandAndFanaddress, 
 
 void MainWindow::on_pushButton_getU_clicked()
 {
-    m_ebmbus->getStatus(1, 1, 0x03);
-    //m_ebmbus->writeTelegram(EbmBus::GetStatus, 1, 1, QByteArray(1, 0x03));
+    m_ebmbus->getStatus(ui->spinBox_fadr->value(), ui->spinBox_gadr->value(), 0x03);
 }
 
 void MainWindow::on_pushButton_getI_clicked()
 {
-    m_ebmbus->getStatus(1, 1, 0x04);
-    //m_ebmbus->writeTelegram(EbmBus::GetStatus, 1, 1, QByteArray(1, 0x04));
+    m_ebmbus->getStatus(ui->spinBox_fadr->value(), ui->spinBox_gadr->value(), 0x04);
 }
 
 void MainWindow::on_pushButton_setSpeed_clicked()
 {
     quint8 speed = ui->spinBox_speed->value();
 
-    m_ebmbus->setSpeedSetpoint(1, 1, speed);
-    //m_ebmbus->writeTelegram(EbmBus::SetSetpoint, 1, 1, QByteArray(1, speed));
+    m_ebmbus->setSpeedSetpoint(ui->spinBox_fadr->value(), ui->spinBox_gadr->value(), speed);
 }
 
 void MainWindow::on_pushButton_status_clicked()
 {
-    m_ebmbus->getSimpleStatus(1, 1);
-    //m_ebmbus->writeTelegram(EbmBus::GetStatus, 1, 1, QByteArray());
+    m_ebmbus->getSimpleStatus(ui->spinBox_fadr->value(), ui->spinBox_gadr->value());
 }
 
 void MainWindow::on_pushButton_EEPROMread_clicked()
@@ -71,8 +67,7 @@ void MainWindow::on_pushButton_EEPROMread_clicked()
     bool ok;
     quint8 eepromRegister = adrText.toInt(&ok, 16);
 
-    m_ebmbus->readEEPROM(1, 1, eepromRegister);
-    //m_ebmbus->writeTelegram(EbmBus::EEPROMread, 1, 1, QByteArray(1, EEPROMregister));
+    m_ebmbus->readEEPROM(ui->spinBox_fadr->value(), ui->spinBox_gadr->value(), eepromRegister);
 }
 
 void MainWindow::on_pushButton_statusRead_clicked()
@@ -81,8 +76,7 @@ void MainWindow::on_pushButton_statusRead_clicked()
     bool ok;
     quint8 statusRegister = adrText.toInt(&ok, 16);
 
-    m_ebmbus->getStatus(1, 1, statusRegister);
-    //m_ebmbus->writeTelegram(EbmBus::GetStatus, 1, 1, QByteArray(1, StatusRegister));
+    m_ebmbus->getStatus(ui->spinBox_fadr->value(), ui->spinBox_gadr->value(), statusRegister);
 }
 
 void MainWindow::on_pushButton_EEPROMwrite_clicked()
@@ -91,5 +85,5 @@ void MainWindow::on_pushButton_EEPROMwrite_clicked()
     bool ok;
     quint8 eepromRegister = adrText.toInt(&ok, 16);
 
-    m_ebmbus->writeEEPROM(1, 1, eepromRegister, ui->spinBox_EEPROMvalue->value());
+    m_ebmbus->writeEEPROM(ui->spinBox_fadr->value(), ui->spinBox_gadr->value(), eepromRegister, ui->spinBox_EEPROMvalue->value());
 }
