@@ -87,3 +87,8 @@ void MainWindow::on_pushButton_EEPROMwrite_clicked()
 
     m_ebmbus->writeEEPROM(ui->spinBox_fadr->value(), ui->spinBox_gadr->value(), eepromRegister, ui->spinBox_EEPROMvalue->value());
 }
+
+void MainWindow::on_pushButton_getActualSpeed_clicked()
+{
+    m_ebmbus->getActualSpeed(ui->spinBox_fadr->value(), ui->spinBox_gadr->value());
+}

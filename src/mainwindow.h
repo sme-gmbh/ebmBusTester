@@ -35,6 +35,8 @@ private slots:
 
     void on_pushButton_EEPROMwrite_clicked();
 
+    void on_pushButton_getActualSpeed_clicked();
+
 private:
     Ui::MainWindow *ui;
     EbmBus* m_ebmbus;

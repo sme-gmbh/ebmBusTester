@@ -647,6 +647,19 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_getActualSpeed">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>50</y>
+      <width>191</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Drehzahl Istwert lesen</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
