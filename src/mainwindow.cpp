@@ -108,12 +108,12 @@ void MainWindow::slot_EEPROMdata(quint64 telegramID, quint8 fanAddress, quint8 f
 
 void MainWindow::on_pushButton_getU_clicked()
 {
-    m_ebmbus->getStatus(ui->spinBox_fadr->value(), ui->spinBox_gadr->value(), 0x03);
+    m_ebmbus->getStatus(ui->spinBox_fadr->value(), ui->spinBox_gadr->value(), EbmBusStatus::DCvoltage);
 }
 
 void MainWindow::on_pushButton_getI_clicked()
 {
-    m_ebmbus->getStatus(ui->spinBox_fadr->value(), ui->spinBox_gadr->value(), 0x04);
+    m_ebmbus->getStatus(ui->spinBox_fadr->value(), ui->spinBox_gadr->value(), EbmBusStatus::DCcurrent);
 }
 
 void MainWindow::on_pushButton_setSpeed_clicked()
