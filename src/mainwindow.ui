@@ -555,6 +555,16 @@
     </item>
     <item>
      <property name="text">
+      <string>11 Netzspannung</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>12 Netzstrom</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
       <string>14 Maximaler Volumenstrom</string>
      </property>
     </item>
