@@ -540,11 +540,6 @@
     </item>
     <item>
      <property name="text">
-      <string>10 Motortemperatur</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
       <string>0B PWM Duty Cycle</string>
      </property>
     </item>
