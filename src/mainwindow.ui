@@ -530,6 +530,11 @@
     </item>
     <item>
      <property name="text">
+      <string>08 Regelmodus</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
       <string>09 Drehrichtung</string>
      </property>
     </item>
@@ -649,7 +654,7 @@
      <x>0</x>
      <y>0</y>
      <width>1073</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
