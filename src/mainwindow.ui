@@ -622,6 +622,26 @@
      </rect>
     </property>
    </widget>
+   <widget class="QSpinBox" name="spinBox_gadr">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_fadr">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>10</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -629,7 +649,7 @@
      <x>0</x>
      <y>0</y>
      <width>1073</width>
-     <height>26</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
