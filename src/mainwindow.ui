@@ -626,6 +626,9 @@
       <height>30</height>
      </rect>
     </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
    </widget>
    <widget class="QSpinBox" name="spinBox_gadr">
     <property name="geometry">
