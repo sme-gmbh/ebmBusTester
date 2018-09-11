@@ -159,3 +159,8 @@ void MainWindow::on_pushButton_getActualSpeed_clicked()
 {
     m_ebmbus->getActualSpeed(ui->spinBox_fadr->value(), ui->spinBox_gadr->value());
 }
+
+void MainWindow::on_pushButton_softwareReset_clicked()
+{
+    m_ebmbus->softwareReset(ui->spinBox_fadr->value(), ui->spinBox_gadr->value());
+}
