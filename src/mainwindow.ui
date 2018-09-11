@@ -663,6 +663,19 @@
      <string>Drehzahl Istwert lesen</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_softwareReset">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>130</y>
+      <width>121</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Software Reset</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -670,7 +683,7 @@
      <x>0</x>
      <y>0</y>
      <width>1073</width>
-     <height>26</height>
+     <height>28</height>
     </rect>
    </property>
   </widget>
